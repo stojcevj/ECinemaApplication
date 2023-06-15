@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ECinema", "ECinema", "{ACDE2EF7-96DE-43BB-9C88-6EB97A3CFB3B}"
+	ProjectSection(SolutionItems) = preProject
+		ReadBeforeUse.txt = ReadBeforeUse.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECinema.Web", "ECinema\ECinema.Web\ECinema.Web.csproj", "{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECinema.Domain", "ECinema\ECinema.Domain\ECinema.Domain.csproj", "{FE8D2DDA-4E56-4E00-9389-6F977302197D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECinema.Repository", "ECinema\ECinema.Repository\ECinema.Repository.csproj", "{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECinema.Service", "ECinema\ECinema.Service\ECinema.Service.csproj", "{7B4CA981-294A-494B-AAD1-DBD6E23F09E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8D2DDA-4E56-4E00-9389-6F977302197D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8D2DDA-4E56-4E00-9389-6F977302197D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8D2DDA-4E56-4E00-9389-6F977302197D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8D2DDA-4E56-4E00-9389-6F977302197D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4CA981-294A-494B-AAD1-DBD6E23F09E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4CA981-294A-494B-AAD1-DBD6E23F09E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4CA981-294A-494B-AAD1-DBD6E23F09E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4CA981-294A-494B-AAD1-DBD6E23F09E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4B2054A-EE6B-4AC1-B9AC-C5F869870ADF} = {ACDE2EF7-96DE-43BB-9C88-6EB97A3CFB3B}
+		{FE8D2DDA-4E56-4E00-9389-6F977302197D} = {ACDE2EF7-96DE-43BB-9C88-6EB97A3CFB3B}
+		{89F75BB6-27FB-42AA-A8BE-884B9B36A5EA} = {ACDE2EF7-96DE-43BB-9C88-6EB97A3CFB3B}
+		{7B4CA981-294A-494B-AAD1-DBD6E23F09E0} = {ACDE2EF7-96DE-43BB-9C88-6EB97A3CFB3B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC77CA2B-AA12-4946-BF2B-49528D959370}
+	EndGlobalSection
+EndGlobal

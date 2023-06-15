@@ -1,0 +1,18 @@
+﻿Email * ECinemaApplication@hotmail.com
+Password * StojcevJovan201080!
+Date * Sep 1st 2001
+FirstName * ECinema
+LastName * Application
+
+
+Кога ќе се направи миграција, и update-database, да се влезе во базата и во Tabelata dbo.AspNet.Roles да се додадат
+две редици: 
+- 1 Admin Admin Admin
+- 2 User User User
+Потоа пред да се вклучи апликацијата за првиот корисник што ќе биде додаден да не се hard code при секое палење да се додава
+треба во ECinema.Web.Controllers.AccountController 
+на линија 58: 
+	await userManager.AddToRoleAsync(tmp, "User");
+место User да се пише Аdmin, потоа се стартува апликацијата се регистрира првиот корисник, се враќаме на истата 58 линија
+и го враќаме во User, со ова овозможуваме првиот корисник да е админ а наредните корисници што ќе се регистрираат да се обични
+корисници.

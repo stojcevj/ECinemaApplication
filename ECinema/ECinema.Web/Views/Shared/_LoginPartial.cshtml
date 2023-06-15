@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ECinema.Domain.Identity
+@inject SignInManager<ECinemaApplicationUser> SignInManager
+@inject UserManager<ECinemaApplicationUser> UserManager
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" title="Manage">Hello @User.Identity.Name!</a>
+        </li>
+
+        if (string.Join(" ", await UserManager.GetRolesAsync(await UserManager.FindByNameAsync(User.Identity.Name))).Equals("Admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-action="Dashboard" asp-controller="Account">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-action="Export" asp-controller="Tickets">Export Tickets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-action="Import" asp-controller="Account">Import Users</a>
+            </li>
+        }
+
+        <li class="nav-item">
+            <a class="nav-link btn btn-link text-dark" asp-controller="account" asp-action="Logout">Logout</a>
+        </li>
+
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="account" asp-action="Register">Register</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="account" asp-action="login">Login</a>
+        </li>
+
+    }
+</ul>  

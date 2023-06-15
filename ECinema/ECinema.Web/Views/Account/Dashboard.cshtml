@@ -1,0 +1,53 @@
+﻿@using ECinema.Domain.DTO
+@using ECinema.Domain.Identity
+@using Microsoft.AspNetCore.Identity;
+@using System.Threading.Tasks;
+@inject UserManager<ECinemaApplicationUser> UserManager
+@model UserToRole
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+            <th>User Role</th>
+            <th>Select Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ECinemaApplicationUser user in Model.userEmails)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    @{
+                        if (string.Join(" ", await UserManager.GetRolesAsync(user)).Equals("Admin"))
+                        {
+                            <p>Admin</p>
+                        }
+                        else
+                        {
+                            <p>User</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        using (Html.BeginForm("AddRole", "Account", FormMethod.Post))
+                        {
+                            <div class="d-flex">
+                                <input name="Email" type="text" value='@user.Email' hidden />
+                                @Html.DropDownListFor(m => m.selectedRole, new SelectList(Model.userRoles), new { @class = "form-control" })
+                                <input type="submit" value="Submit" class="btn btn-success mx-2" />
+                            </div>
+
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
